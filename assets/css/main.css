@@ -1,7 +1,8 @@
 :root {
     --width: 720px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-secondary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-code: "Consolas", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", "monospace";
     --font-scale: 1em;
     --background-color: #fff;
     --heading-color: #222;
@@ -94,7 +95,7 @@ img {
 }
 
 code {
-    font-family: monospace;
+    font-family: var(--font-code);
     padding: 2px;
     border-radius: 3px;
 }
@@ -123,8 +124,15 @@ footer {
     width: auto !important;
 }
 
-.highlight,
-.code {
+.highlight pre {
+    overflow-x: auto;
+    padding-left: 0.5em;
+}
+
+.highlight code {
+    padding: 0px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
     border-radius: 3px;
     margin-block-start: 1em;
     margin-block-end: 1em;
